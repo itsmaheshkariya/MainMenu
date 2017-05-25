@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/dashboard"
+            android:title="Dashbord" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/table_list"
+            android:title="All Tables" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/create_table"
+            android:title="Create Table" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/delete_table"
+            android:title="Delete Table" />
+        <item
+            android:id="@+id/columns"
+            android:icon="@drawable/columns"
+            android:title="Columns" />
+        <item
+            android:id="@+id/rows"
+            android:icon="@drawable/rows"
+            android:title="Rows" />
+
+
+
+
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/about_us"
+                android:title="About Us" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "864211782266",
+    "project_id": "byteheight-164822"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864211782266:android:00b1ec6907b45ee5",
+        "android_client_info": {
+          "package_name": "com.easytrix.hakethone.main"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864211782266-61tuklih86rckgl0gimg4gh5kdf8snfu.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "864211782266-p316311nok8gf3reutkinblbb80a9sfp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.easytrix.hakethone.main",
+            "certificate_hash": "e806e5ec9234c11a17cc5ae054b8b58cd2b11691"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkzwpGVawGSP7kofKYY33gklzPhvl_8u4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

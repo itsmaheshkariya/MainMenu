@@ -1,0 +1,559 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>INSERT COLUMN</title> 
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="jquery.mobile-1.3.1.css" />
+  <script src="index.js"></script>
+  <script src="index1.js"></script>
+  <script src="angular.min.js"></script>
+
+</head> 
+<body> 
+
+<div data-role="page">
+ <div data-role="header" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="E:\graphite-1.3.1_4\generated\water\create.htm" data-icon="gear" class="ui-btn-active ui-state-persist">Create</a></li>
+        <li><a href="E:\graphite-1.3.1_4\generated\water\insert.htm" data-icon="refresh">Insert</a></li>
+        <li><a href="E:\graphite-1.3.1_4\generated\water\select.htm" data-icon="check">Select</a></li>
+      </ul>
+    </div>
+  </div>
+
+ 
+  <div data-role="content" ng-app="myapp" ng-controller="empcontroller"> 
+   
+    <div data-role="main"  class="ui-content">
+    <form method="post" action="http://byteheight.16mb.com/alter_table.php">
+   
+   <div data-role="collapsible" data-theme="a" data-content-theme="a">
+        <h3>Insert Column </h3>
+    
+  <div data-role="main" class="ui-content">
+    <form method="post" action="/action_page_post.php">
+
+
+    <div data-role="fieldcontain">
+             <label for="name-c">Name :</label>
+             <input ng-model="name" type="text" name="name" id="name-c" value=""  />
+        </div>
+
+          <div data-role="fieldcontain">
+             <label for="name-c">Length :</label>
+             <input ng-model="length" type="text" name="length" id="name-c" value=""  />
+        </div>
+
+       
+
+         <div data-role="fieldcontain">
+            <fieldset ng-model="key" data-role="controlgroup" name="key">
+              <legend>Index:</legend>
+                  <input type="radio" name="radio-choice-1" id="radio-choice-1c" value="choice-1" />
+                  <label for="radio-choice-1c">PRIMARY</label>
+
+                  <input type="radio" name="radio-choice-1" id="radio-choice-2c" value="choice-2"  />
+                  <label for="radio-choice-2c">UNIQUE</label>
+
+                  <input type="radio" name="radio-choice-1" id="radio-choice-3c" value="choice-3"  />
+                  <label for="radio-choice-3c">FULLSET</label>
+                  
+                    <input type="radio" name="radio-choice-1" id="radio-choice-4c" value="choice-4"  />
+                  <label for="radio-choice-4c">INDEX</label>
+
+                  <input type="radio" name="radio-choice-1" id="radio-choice-5c" value="choice-5"  />
+                  <label for="radio-choice-5c">SPATIAL</label>
+            </fieldset>
+        </div>
+
+
+
+         <div data-role="fieldcontain">
+          <label for="select-choice-c" class="select">Data Type:</label>
+          <select ng-model="typedata" name="typedata" id="select-choice-c">
+            <option value="int">INT</option>
+            <option value="VARCHAR">VARCHAR</option>
+            <option value="text">TEXT</option>
+            <option value="float">FLOAT</option>
+            <option value="date">DATE</option>
+            <option value="longbolb">LONGBOLB</option>
+            <option value="decimal">DECIMAL</option>
+            <option value="datatime">DATETIME</option>
+          </select>
+        </div>
+
+
+  
+
+
+<div ng-app="" ng-controller="customersCtrl" ng-init="i=1"> 
+   
+     <div data-role="fieldcontain">
+          <label for="select-choice-c" class="select">Select Table:</label>
+          <select ng-model="tablename" name="{{x.title}}" id="select-choice-c">
+            <option ng-repeat="x in names" value="trial11">{{x.title}}</option>
+           
+          </select>
+        </div>
+  
+     
+     
+   
+    </div><!-- /themed container -->
+ 
+<script>
+var app = angular.module('myapp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $http.get("http://byteheight.16mb.com/angularget.php")
+    .then(function (response) {$scope.names = response.data.records;});
+});
+</script>
+ 
+ 
+
+
+
+
+
+
+
+
+ <label for="flip-1">AI:</label>
+    <select  ng-model="ai" id="flip-1" name="ai" data-role="slider">
+      <option value="off">Off</option>
+      <option value="on">On</option>
+    </select> 
+     <label for="flip-1">NULL:</label>
+    <select ng-model="nnul" name="nnull" id="flip-1" data-role="slider">
+      <option value="off">Off</option>
+      <option value="on">On</option>
+    </select> <br><hr>
+  <input type="submit" data-inline="true" value="Insert">
+       
+  </div>
+   </div>
+       </form>
+
+
+
+
+
+
+
+
+
+ <form method="post" action="http://byteheight.16mb.com/alter_table.php">
+   
+   <div data-role="collapsible" data-theme="a" data-content-theme="a">
+        <h3>Delete Column </h3>
+    
+  <div data-role="main" class="ui-content">
+    <form method="post" action="/action_page_post.php">
+
+
+   
+       
+
+      
+  
+
+
+<div ng-app="" ng-controller="customersCtrl"> 
+   
+     <div data-role="fieldcontain">
+          <label for="select-choice-c" class="select">Select Table:</label>
+          <select ng-model="tablename" name="typedata" id="select-choice-c">
+            <option ng-repeat="x in names" value="int">{{x.title}}</option>
+           
+          </select>
+        </div>
+  
+     
+     
+   
+    </div><!-- /themed container -->
+ 
+<script>
+var app = angular.module('myapp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $http.get("http://byteheight.16mb.com/angularget.php")
+    .then(function (response) {$scope.names = response.data.records;});
+});
+</script>
+
+
+<div ng-app="" ng-controller="customersCtrl"> 
+   
+     <div data-role="fieldcontain">
+          <label for="select-choice-c" class="select">Select Column:</label>
+          <select ng-model="tablename" name="typedata" id="select-choice-c">
+            <option ng-repeat="x in names" value="int">{{x.title}}</option>
+           
+          </select>
+        </div>
+  
+     
+     
+   
+    </div><!-- /themed container -->
+ 
+ 
+
+
+
+
+
+
+
+
+
+    <br><hr>
+  <input type="submit" data-inline="true" value="Delete">
+       
+  </div>
+   </div>
+       </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <form method="post" action="http://byteheight.16mb.com/alter_table.php">
+   
+   <div data-role="collapsible" data-theme="a" data-content-theme="a">
+        <h3>Alter Column </h3>
+    
+  <div data-role="main" class="ui-content">
+    <form method="post" action="/action_page_post.php">
+
+
+
+
+
+
+
+<div ng-app="" ng-controller="customersCtrl"> 
+   
+     <div data-role="fieldcontain">
+          <label for="select-choice-c" class="select">Select Table:</label>
+          <select ng-model="tablename" name="typedata" id="select-choice-c">
+            <option ng-repeat="x in names" value="int">{{x.title}}</option>
+           
+          </select>
+        </div>
+  
+     
+     
+   
+    </div><!-- /themed container -->
+ 
+<script>
+var app = angular.module('myapp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $http.get("http://byteheight.16mb.com/angularget.php")
+    .then(function (response) {$scope.names = response.data.records;});
+});
+</script>
+
+
+<div ng-app="" ng-controller="customersCtrl"> 
+   
+     <div data-role="fieldcontain">
+          <label for="select-choice-c" class="select">Select Column:</label>
+          <select ng-model="tablename" name="typedata" id="select-choice-c">
+            <option ng-repeat="x in names" value="int">{{x.title}}</option>
+           
+          </select>
+        </div>
+  
+     
+     
+   
+    </div><!-- /themed container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div data-role="fieldcontain">
+             <label for="name-c">Name :</label>
+             <input ng-model="name" type="text" name="name" id="name-c" value=""  />
+        </div>
+
+          <div data-role="fieldcontain">
+             <label for="name-c">Length :</label>
+             <input ng-model="length" type="text" name="length" id="name-c" value=""  />
+        </div>
+
+       
+
+         <div data-role="fieldcontain">
+            <fieldset ng-model="key" data-role="controlgroup" name="key">
+              <legend>Index:</legend>
+                  <input type="radio" name="radio-choice-1" id="radio-choice-1c" value="choice-1" />
+                  <label for="radio-choice-1c">PRIMARY</label>
+
+                  <input type="radio" name="radio-choice-1" id="radio-choice-2c" value="choice-2"  />
+                  <label for="radio-choice-2c">UNIQUE</label>
+
+                  <input type="radio" name="radio-choice-1" id="radio-choice-3c" value="choice-3"  />
+                  <label for="radio-choice-3c">FULLSET</label>
+                  
+                    <input type="radio" name="radio-choice-1" id="radio-choice-4c" value="choice-4"  />
+                  <label for="radio-choice-4c">INDEX</label>
+
+                  <input type="radio" name="radio-choice-1" id="radio-choice-5c" value="choice-5"  />
+                  <label for="radio-choice-5c">SPATIAL</label>
+            </fieldset>
+        </div>
+
+
+
+         <div data-role="fieldcontain">
+          <label for="select-choice-c" class="select">Data Type:</label>
+          <select ng-model="typedata" name="typedata" id="select-choice-c">
+            <option value="int">INT</option>
+            <option value="VARCHAR">VARCHAR</option>
+            <option value="text">TEXT</option>
+            <option value="float">FLOAT</option>
+            <option value="date">DATE</option>
+            <option value="longbolb">LONGBOLB</option>
+            <option value="decimal">DECIMAL</option>
+            <option value="datatime">DATETIME</option>
+          </select>
+        </div>
+
+
+  
+
+
+<div ng-app="" ng-controller="customersCtrl"> 
+   
+     <div data-role="fieldcontain">
+          <label for="select-choice-c" class="select">Select Table:</label>
+          <select ng-model="tablename" name="typedata" id="select-choice-c">
+            <option ng-repeat="x in names" value="int">{{x.title}}</option>
+           
+          </select>
+        </div>
+  
+     
+     
+   
+    </div><!-- /themed container -->
+ 
+<script>
+var app = angular.module('myapp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $http.get("http://byteheight.16mb.com/angularget.php")
+    .then(function (response) {$scope.names = response.data.records;});
+});
+</script>
+ 
+ 
+
+
+
+
+
+
+
+
+ <label for="flip-1">AI:</label>
+    <select  ng-model="ai" id="flip-1" name="ai" data-role="slider">
+      <option value="off">Off</option>
+      <option value="on">On</option>
+    </select> 
+     <label for="flip-1">NULL:</label>
+    <select ng-model="nnul" name="nnull" id="flip-1" data-role="slider">
+      <option value="off">Off</option>
+      <option value="on">On</option>
+    </select> <br><hr>
+  <input type="submit" data-inline="true" value="Insert">
+       
+  </div>
+   </div>
+       </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form method="post" action="http://byteheight.16mb.com/alter_table.php">
+   
+   <div data-role="collapsible" data-theme="a" data-content-theme="a">
+        <h3>Select Column </h3>
+    
+  <div data-role="main" class="ui-content">
+    <form method="post" action="/action_page_post.php">
+
+
+   
+       
+
+      
+  
+
+
+<div ng-app="" ng-controller="customersCtrl"> 
+   
+     <div data-role="fieldcontain">
+          <label for="select-choice-c" class="select">Select Table:</label>
+          <select ng-model="tablename" name="typedata" id="select-choice-c">
+            <option ng-repeat="x in names" value="int">{{x.title}}</option>
+           
+          </select>
+        </div>
+  
+     
+     
+   
+    </div><!-- /themed container -->
+ 
+<script>
+var app = angular.module('myapp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $http.get("http://byteheight.16mb.com/angularget.php")
+    .then(function (response) {$scope.names = response.data.records;});
+});
+</script>
+
+
+<div ng-app="" ng-controller="customersCtrl"> 
+   
+     <div data-role="fieldcontain">
+          <label for="select-choice-c" class="select">Select Column:</label>
+          <select ng-model="tablename" name="typedata" id="select-choice-c">
+            <option ng-repeat="x in names" value="int">{{x.title}}</option>
+           
+          </select>
+        </div>
+  
+     
+     
+   
+    </div><!-- /themed container -->
+ 
+ 
+
+
+
+
+
+<script language="javascript">
+
+   
+   function refuseClick()
+   {
+      ok.performClick();
+      document.getElementById("no").value = "No";
+   }
+
+</script>
+
+
+
+    <br><hr>
+  <input type="submit" data-inline="true" value="Select" id="no" onclick="ok.refuseClick()"; >
+       
+  </div>
+   </div>
+       </form>
+
+
+
+
+
+
+
+
+
+
+
+  </div><!-- /content -->
+
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a src="#pagefive" data-transition="slide" data-direction="reverse" data-icon="gear">Update</a></li>
+        <li><a src="#pagethree" data-icon="refresh">Show</a></li>
+        <li><a src="#pageone" data-icon="check">Delete</a></li>
+      </ul>
+    </div>
+  </div>
+<script>
+  app.controller('empcontroller', function ($scope, $http) {
+/*
+* This method will be called on click event of button. window.location.href + 
+*/
+$scope.postData = function () {
+
+    var request = $http({
+        method: "post",
+        url: "http://byteheight.16mb.com/angular_insert.php",
+        data: {
+            name: $scope.name,
+            length: $scope.length,
+            typedata: $scope.typedata,
+            nnull: $scope.nnull,
+            ai: $scope.ai,
+            tablename: $scope.tablename,
+            key: $scope.key,
+        },
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+    });
+
+ }
+}); 
+</script>
+</div><!-- /page -->
+
+</body>
+</html>
